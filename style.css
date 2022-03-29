@@ -1,0 +1,105 @@
+*{
+	margin: 0; /* Membuat halaman tanpa spasi, dimulai dari pojok kiri atas */
+	padding: 0;
+	box-sizing: border-box; /* Agar padding dan margin style tidak mengganggu width dab height */
+}
+body{
+	font-family: 'Open Sans', sans-serif; /* Import font */
+	background: rgba(0, 0, 0, .1); /* Merubah warna seluruh body */
+}
+header{
+	height: 100px; /* Mengatur tinggi seluruh header */
+	display: flex; /* Agar seluruh header (logo dan list) dapat berada di dalam satu baris */
+	justify-content: space-around; /* Agar logo dan list dapat berada di tengah secara horizontal, tetapi logo dan list tidak berdempetan */
+	align-items: center; /* Agar logo dan list dapat berada di tengah secara vertikal dari batas header yaitu 100px */
+	border-bottom: 2.5px solid  purple; /* Memberikan efek underline dibawah logo dan list di perbatasan header */
+}
+ul{
+	display: flex; /* Agar list (home, service, dll) dapat sejajar horizontal dan tidak vertikal */
+	list-style: none; /* Menghilangkan dot di list */
+	align-items: center; /* Agar list dapat berada di tengah perbatasan header*/
+}
+
+ul li a{
+	padding: 0px 25px; /* Memberikan jarak antara teks list */
+	text-decoration: none; /* Menghilangkan underline dari link */
+	color:  #3a3a3a; /* Mengganti warna teks */
+	display: inline-block; /* Mengubah teks link (inline) menjadi inline-block, agar dapat dirubah paddingnya */
+}
+li a::after{
+	content: ''; /* Dikosongkan agar tidak ada teks dibawah link, digunakan hanya untuk menambah dekorasi dibawah list */
+	display: block; /* Untuk mengganti level menjadi block, agar bisa diubah heightnya */
+	height: 4px; /* Tinggi dekorasi adalah 4px */
+	width: 0%; /* Dekorasi dimulai dari 0% sehingga tidak terlihat*/
+	background: #c4c4f7; /* Warna dekorasi */
+	transition: all .5s; /* Animasi */
+}
+li a:hover::after{
+	width: 100%; /* Setelah di bayangi, akan muncul dekorasi 100% */
+}
+main{
+	display: flex;
+	height: calc(100vh - 100px);
+	align-items: center;
+	justify-content: space-around;
+}
+.hero-img{
+	max-width: 670px;
+	height: auto;
+	border-radius: 30px;
+	user-select: none;
+}
+.content-left{
+	width: 30%;
+}
+main h1{
+	font-size: 54px;
+	color: #133B4F;
+	text-transform: uppercase;
+}
+main h2{
+	font-size: 25px;
+	color:  #fca70c;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	border-bottom: 2px solid;
+}
+main p{
+	font-size:  14px;
+	font-weight: 400;
+	color: #333;
+	line-height: 31.5px;
+	margin: 30px 0;
+}
+.cta{
+	padding:  15px 30px;
+	background: #c4c4f7;
+	color: #fff;
+	outline: none;
+	border: none;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: all ease .3s;
+}
+.cta:hover{
+	color: #c4c4f7;
+	background: #fff;
+}
+.signup-btn{
+	padding:  10px 30px;
+	background: #c4c4f7;
+	color: #fff;
+	outline: none;
+	border: none;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 30px;
+	transition: all ease .3s;
+}
+.signup-btn:hover{
+	color: #c4c4f7;
+	background: #fff;
+}
